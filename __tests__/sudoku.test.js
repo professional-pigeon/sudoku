@@ -25,11 +25,14 @@ describe('TestSequence', () => {
     expect(testSequence.bigArray()).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   })
 
-  test('should compare numberArray to testArray and return true', () =>  {
+  test('should compare bigString to "1,2,3,4,5,6,7,8,9" and return true', () =>  {
     const testSequence = new TestSequence(2, 4, 7, 1, 8, 9, 3, 6, 5)
     expect(testSequence.bigTest()).toEqual(true);
   })
 
-
+  test('should compare bigString to "1,2,3,4,5,6,7,8,9" and return false', () =>  {
+    const testSequence = new TestSequence(2, 4, 7, 1, 8, 9, 6, 6, 5)
+    expect(testSequence.bigTest()).toEqual(false);
+  })
 
 });
