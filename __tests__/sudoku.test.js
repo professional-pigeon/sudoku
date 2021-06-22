@@ -12,7 +12,19 @@ describe('TestSequence', () => {
       expect(testSequence.number6).toEqual(6);
       expect(testSequence.number7).toEqual(7);
       expect(testSequence.number8).toEqual(8);
-      expect(testSequence.number9).toEqual(9);
-      
+      expect(testSequence.number9).toEqual(9);  
   });
+
+  test('should create a number array of 9 numbers', () => {
+    const testSequence = new TestSequence(1, 2, 3, 4, 5, 6, 7, 8, 9)
+    expect(testSequence.bigArray()).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  });
+
+  test('should reorder array numerically', () =>  {
+    const testSequence = new TestSequence(2, 4, 7, 1, 8, 9, 3, 6, 5)
+    expect(testSequence.bigArray()).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  })
+
+  
+
 });
