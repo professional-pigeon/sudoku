@@ -16,33 +16,12 @@ TestSequence.prototype.bigArray = function() {
   return numberArray
 }
 
-// TestSequence.prototype.bigTest = function() {
-//   let numberArray = this.bigArray()
-//   let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-//   if (numberArray === testArray)  {
-//     return true
-//   } else {
-//     return false
-//   }
-// }
-
-// number1 !== number2, number1 !== number3
-//   return true
-
-// each  number goes through loop. you are testing to confirm that the numberArray[1-9] evaluates true for every number.
- 
-
-// if(numberArray === testsequence[position])
-//   ticker ++
-//   total should be 9
-//   fail would be less than 9
-
-//   if (numberArray === testSequence)
-
-
-// let numberArray = [9, 2, 3, 5, 4, 1, 6, 7, 8]
-// numberArray.sort()
-
-
-
-
+TestSequence.prototype.bigTest = function() {
+  let testArray = this.bigArray();
+  let bigString = testArray.toString()
+  if (bigString === "1,2,3,4,5,6,7,8,9")  {
+    return true
+  } else {
+    return false
+  }
+}
